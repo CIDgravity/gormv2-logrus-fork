@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.3.0
+### Added
+- Rows affected as Logrus parameter
+### Fixed
+- Colorful option removed because Logrus doesn't work well when output is redirected to file
+- Change SLOW SQL requests to add the "reason" parameter
+- Remove new lines when logging
 ## 1.2.0
 ### Added
 - Gorm options support
