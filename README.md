@@ -7,7 +7,7 @@ Usage example :
 package test
 
 import (
-	gormv2logrus "github.com/thomas-tacquet/gormv2-logrus"
+	gormv2logrus "github.com/CIDgravity/gormv2-logrus-fork"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
 )

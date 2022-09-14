@@ -10,7 +10,7 @@ import (
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 
-	gormv2logrus "github.com/thomas-tacquet/gormv2-logrus"
+	gormv2logrus "github.com/CIDgravity/gormv2-logrus-fork"
 )
 
 func TestWithLogrus(t *testing.T) {
