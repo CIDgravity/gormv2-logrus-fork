@@ -96,7 +96,7 @@ func (gl *Gormlog) Trace(ctx context.Context, begin time.Time, fc func() (string
 
 	// if logLatency is true, add stopWatch information
 	if gl.opts.logLatency {
-		logrusFields["duration"] = stopWatch
+		logrusFields["duration_microseconds"] = stopWatch.Microseconds()
 	}
 
 	// add number of affected rows as logrus parameter
@@ -142,7 +142,7 @@ func (gl *Gormlog) Trace(ctx context.Context, begin time.Time, fc func() (string
 
 		// instead of adding SLOW SQL to the message, add reason field
 		// this can be parsed easily with logs management tools
-		logrusFields["reason"] = "SLOW SQL"
+		logrusFields["reason"] = "slow query"
 
 		if gl.opts.lr != nil {
 			gl.opts.lr.WithContext(ctx).WithFields(logrusFields).Warnf("%s", traceLog)
